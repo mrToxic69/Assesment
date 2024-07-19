@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="validation.js" defer></script>
+    <title>Rishton Academy web portal</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rishton Academy web System</h1>
+    </header>
+    <div class="container">
+        <h2>Enter Pupil Information</h2>
+        <form action="insert_pupil.php" method="post" id="pupilForm">
+            <label for="pupil_name">Pupil Name:</label>
+            <input type="text" id="pupil_name" name="pupil_name" required>
+            <label for="pupil_address">Address:</label>
+            <input type="text" id="pupil_address" name="pupil_address" required>
+            <label for="pupil_medical">Medical Info:</label>
+            <input type="text" id="pupil_medical" name="pupil_medical" required>
+            <label for="class_id">Class ID:</label>
+            <input type="number" id="class_id" name="class_id" required min="1">
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Enter Parent Information</h2>
+        <form action="insert_parent.php" method="post" id="parentForm">
+            <label for="parent_name">Parent Name:</label>
+            <input type="text" id="parent_name" name="parent_name" required>
+            <label for="parent_address">Address:</label>
+            <input type="text" id="parent_address" name="parent_address" required>
+            <label for="parent_email">Email:</label>
+            <input type="email" id="parent_email" name="parent_email" required>
+            <label for="parent_phone">Phone:</label>
+            <input type="text" id="parent_phone" name="parent_phone" required pattern="\d{10}">
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Enter Teacher Information</h2>
+        <form action="insert_teacher.php" method="post" id="teacherForm">
+            <label for="teacher_name">Teacher Name:</label>
+            <input type="text" id="teacher_name" name="teacher_name" required>
+            <label for="teacher_address">Address:</label>
+            <input type="text" id="teacher_address" name="teacher_address" required>
+            <label for="teacher_phone">Phone:</label>
+            <input type="text" id="teacher_phone" name="teacher_phone" required pattern="\d{10}">
+            <label for="teacher_salary">Salary:</label>
+            <input type="number" id="teacher_salary" name="teacher_salary" required min="0" step="0.01">
+            <label for="teacher_bgcheck">Background Check:</label>
+            <input type="text" id="teacher_bgcheck" name="teacher_bgcheck" required>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Enter Class Information</h2>
+        <form action="insert_class.php" method="post" id="classForm">
+            <label for="class_name">Class Name:</label>
+            <input type="text" id="class_name" name="class_name" required>
+            <label for="class_capacity">Class Capacity:</label>
+            <input type="number" id="class_capacity" name="class_capacity" required min="1">
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Enter Attendance Information</h2>
+        <form action="insert_attendance.php" method="post" id="attendanceForm">
+            <label for="pupil_id">Pupil ID:</label>
+            <input type="number" id="pupil_id" name="pupil_id" required min="1">
+            <label for="attendance_date">Date:</label>
+            <input type="date" id="attendance_date" name="attendance_date" required>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required>
+            <input type="submit" value="Submit">
+        </form>
+
+        <h2>Enter Salary Information</h2>
+        <form action="insert_salary.php" method="post" id="salaryForm">
+            <label for="teacher_id">Teacher ID:</label>
+            <input type="number" id="teacher_id" name="teacher_id" required min="1">
+            <label for="salary_amount">Amount:</label>
+            <input type="number" id="salary_amount" name="salary_amount" required min="0" step="0.01">
+            <label for="salary_date">Date:</label>
+            <input type="date" id="salary_date" name="salary_date" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
